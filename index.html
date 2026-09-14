@@ -26,17 +26,24 @@
     color:var(--ink);
     font-family:'Inter',sans-serif;
     line-height:1.55;
+    position: relative;
+    min-height: 100vh;
   }
   
+  /* Исправленный фон: теперь подложка заполняет всю страницу до самого низа */
   body::before {
     content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
     background-image: url('bg-teeth.jpg');
     background-repeat: repeat;
     background-size: 220px;
     opacity: 0.12;
     z-index: -1;
+    pointer-events: none;
   }
 
   h1,h2,h3{
@@ -167,7 +174,7 @@
 </head>
 <body>
 
-<div class="meta-label">ЭКРАН 1  ГЛАВНАЯ СТРАНИЦА</div>
+<div class="meta-label">ЭКРАН 1 — ГЛАВНАЯ СТРАНИЦА</div>
 
 <header class="site">
   <div class="wrap navrow">
@@ -236,7 +243,7 @@
 <section class="section" style="padding:36px 0;">
   <div class="wrap" style="display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:center;">
     <div class="media" style="background:none;padding:0;height:150px;"><img src="foto-fasad.jpg" alt="Фасад клиники Denta V" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-    <p style="color:var(--ink-soft);margin:0;">Ищите вывеску «Стоматология» у входа - рядом появится собственная вывеска Denta V. 3 минуты пешком от метро Варшавская.</p>
+    <p style="color:var(--ink-soft);margin:0;">Ищите вывеску «Стоматология» у входа — рядом появится собственная вывеска Denta V. 3 минуты пешком от метро Варшавская.</p>
   </div>
 </section>
 
@@ -244,7 +251,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Чем мы занимаемся</h2>
-      <p>Четыре основных направления - у каждого своя страница на сайте с ценами, врачами и понятным объяснением процесса.</p>
+      <p>Четыре основных направления — у каждого своя страница на сайте с ценами, врачами и понятным объяснением процесса.</p>
     </div>
 
     <div class="service-row">
@@ -252,7 +259,7 @@
       <div>
         <div class="service-num">Раздел сайта</div>
         <h3>Терапевтическое лечение</h3>
-        <p>Кариес, пульпит, эстетическая реставрация - без боли и с понятным планом на первом визите.</p>
+        <p>Кариес, пульпит, эстетическая реставрация — без боли и с понятным планом на первом визите.</p>
         <a class="service-link" href="#">Смотреть раздел «Лечение» →</a>
       </div>
     </div>
@@ -262,7 +269,7 @@
       <div>
         <div class="service-num">Раздел сайта</div>
         <h3>Протезирование и имплантация</h3>
-        <p>От коронки до полной имплантации - консультация с 3D-диагностикой перед началом.</p>
+        <p>От коронки до полной имплантации — консультация с 3D-диагностикой перед началом.</p>
         <a class="service-link" href="#">Смотреть раздел «Протезирование» →</a>
       </div>
     </div>
@@ -272,7 +279,7 @@
       <div>
         <div class="service-num">Раздел сайта</div>
         <h3>Детская стоматология</h3>
-        <p>Отдельный подход к первому визиту ребёнка - без слёз и с игровой адаптацией к креслу.</p>
+        <p>Отдельный подход к первому визиту ребёнка — без слёз и с игровой адаптацией к креслу.</p>
         <a class="service-link" href="#">Смотреть раздел «Детям» →</a>
       </div>
     </div>
@@ -293,7 +300,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Врачи клиники</h2>
-      <p>Живые лица, а не стоковые фото в халатах - это то, что реально снижает тревожность у новых пациентов.</p>
+      <p>Живые лица, а не стоковые фото в халатах — это то, что реально снижает тревожность у новых пациентов.</p>
     </div>
     <div class="doctors">
       <div class="doctor"><div class="media" style="background:none;padding:0;"><img src="foto-vrach.jpg" alt="Владимир Вербицкий, врач высшей категории" style="width:100%;height:100%;object-fit:contain;display:block;"></div><h4>Владимир Вербицкий</h4><span>Врач высшей категории</span></div>
@@ -308,8 +315,8 @@
   <div class="wrap trust">
     <div class="media" style="background:none;padding:0;"><img src="foto-ozhidanie.jpg" alt="Зона ожидания клиники Denta V" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
     <div>
-      <blockquote>«Впервые пришла в новую клинику без стресса - врач всё объяснил до того, как включил инструмент»</blockquote>
-      <div class="who">- реальный отзыв пациента, добавить после первых визитов</div>
+      <blockquote>«Впервые пришла в новую клинику без стресса — врач всё объяснил до того, как включил инструмент»</blockquote>
+      <div class="who">— реальный отзыв пациента, добавить после первых визитов</div>
     </div>
   </div>
 </section>
